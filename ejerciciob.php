@@ -3,22 +3,22 @@
         <title>Ingresando valor</title>
     </head>
     <body>
-        <form method="post" action="pagina.php">
+        <form method="post">
          Ingrese el valor del numero:
-        <input type="text" name="numero" value="0">
+        <input type="text" name="numero" >
         <br>
         <input type="submit" value="confirmar">
         </form>
 
       <?php
-             if($_REQUEST['numero'] % 2 == 0)
-               {
-          echo "El numero ingresado es par:";
-         }
-             else
-              {
-               echo "El numero ingresado es impar";
-                }
+      if($_POST['numero'] <= 0){
+        echo "el numero es nulo";
+    }elseif($_POST['numero'] % 2 == 0){
+          echo "el numero es par";
+      }else{
+          echo "el numero es impar";
+      }
+        
       ?>
 </body>
 </html>
